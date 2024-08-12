@@ -1,0 +1,94 @@
+/*
+<div class="main-wrapper">
+  <div class="carousel-wrapper">
+		<div class="carousel">
+			<div class="slide">
+        <img />
+			<div class="editor"></div>
+		</div>
+	</div>	
+	<div class="chat">
+		<div class="chat-toggle-btn">:)</div>
+		<div class="messages">
+			<p>Testing the chat</p>
+			<p>Testing the chat</p>
+		</div>		
+	</div>
+</div>
+*/
+body {
+  margin: 0;
+}
+.main-wrapper {
+  display: flex;
+  height: 100vh;
+}
+.carousel-wrapper {
+  background: rgb(200, 200, 200);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.carousel {
+  background: rgb(200, 150, 200);
+  width: 600px;
+  min-width: 380px;
+  height: 800px;
+  margin: 20px 0px;
+}
+.slide {
+}
+.slide img {
+  width: 100%;
+}
+.editor {
+}
+.chat {
+  position: absolute;
+  right: -400px;
+  background: gray;
+  height: 100vh;
+  width: 400px;
+  transition: right 0.2s;
+}
+.chat-is-open {
+  right: 0;
+}
+.chat-toggle-btn {
+  position: absolute;
+  left: -40px;
+  top: 10px;
+  opacity: 0.8;
+  background: orange;
+  padding: 8px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 24px;
+}
+.chat-toggle-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.chat .messages p {
+  border-radius: 5px;
+  background: white;
+  margin: 10px;
+  padding: 4px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1000px) {
+  .chat {
+    position: relative;
+    background: gray;
+    height: 100vh;
+    width: 0px;
+    right: 0;
+    transition: width 0.2s;
+  }
+  .chat-is-open {
+    width: 600px;
+  }
+}
+
